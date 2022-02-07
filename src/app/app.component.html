@@ -1,0 +1,43 @@
+<h1 [appHighlight]="animationSpeed">My Animals!!</h1>
+
+<h2>Fill in your own animal below:</h2>
+<input
+  type="text"
+  #inputName
+  placeholder="Name"
+  (keyup)="input1(inputName.value)"
+/>
+<input
+  type="string"
+  #inputType
+  placeholder="Type"
+  (keyup)="input2(inputType.value)"
+/>
+<input
+  type="number"
+  #inputAge
+  placeholder="Age"
+  (keyup)="input3(inputAge.value)"
+/>
+
+<input
+  type="text"
+  #inputLegs
+  placeholder="Has the animal 4 legs (Yes/No)?"
+  (keyup)="input4(inputLegs.value)"
+/>
+
+<input
+  type="text"
+  #inputHungry
+  placeholder="Is the animal hungry? (Yes/No)"
+  (keyup)="input5(inputHungry.value)"
+/>
+<button (click)="handleInput()">Send</button>
+
+<p>How many animals are fed: {{ numberFed }}</p>
+<app-print-animal
+  *ngFor="let a of animals"
+  [animal2]="a"
+  (fed)="isAnimalFed($event)"
+></app-print-animal>

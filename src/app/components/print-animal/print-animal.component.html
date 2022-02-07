@@ -1,0 +1,22 @@
+<div>
+  <ul [appHighlight]="animationSpeed">
+    <li>Name: {{ animal2.name }}</li>
+    <li>Type: {{ animal2.type }}</li>
+    <li>{{ animal2.age }} years</li>
+    <li *ngIf="animal2.fourLegs; else elseBlock1">
+      The {{ animal2.type }} has four legs!
+    </li>
+    <ng-template #elseBlock1>
+      <li>The {{ animal2.type }} has two legs!</li>
+    </ng-template>
+    <li *ngIf="animal2.isFed; else elseBlock2" class="eaten">
+      The {{ animal2.type }} has eaten!!
+    </li>
+    <ng-template #elseBlock2>
+      <li class="hungry">The {{ animal2.type }} is hungry!</li>
+    </ng-template>
+  </ul>
+  <span>
+    <button (click)="animalIsFed()">FED THE ANIMAL</button>
+  </span>
+</div>

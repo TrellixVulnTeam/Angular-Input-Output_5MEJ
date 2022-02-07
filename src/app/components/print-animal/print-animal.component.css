@@ -1,0 +1,42 @@
+li,
+.elseBlock {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  color: #ebffc7;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+input {
+  width: 300px;
+}
+
+div {
+  width: 50vh;
+  border: 5px dotted seagreen;
+  padding: 20px;
+  margin: 20px;
+}
+
+.eaten {
+  color: springgreen;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.hungry {
+  color: darkred;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+span {
+  display: block;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  -webkit-box-shadow: 2px 2px 4px #fff;
+          box-shadow: 2px 2px 4px #fff;
+  background-color: darkslateblue;
+  color: white;
+}
+/*# sourceMappingURL=print-animal.component.css.map */
